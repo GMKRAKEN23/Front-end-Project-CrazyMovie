@@ -1,15 +1,18 @@
-import classNames from 'classnames';
+import { Spin as Hamburger } from 'hamburger-react'
 import { useState } from 'react';
 
- function BurgerMenu() {
-  const [opened, setOpened] = useState(false);
-
+function BurgerMenu() {
+  const [isOpen, setOpen] = useState(false);
   return (
-    <div className={classNames(`tham tham-e-squeeze tham-w-10 bg-white`, { 'tham-active': opened })}>
-      <div className="tham-box">
-        <div className="tham-inner"/>
-      </div>
+    <div className='spacing-burger'>
+      <Hamburger
+        toggled={isOpen}
+        toggle={setOpen}
+        size={30}
+        color='#FFFFFF'
+      />
     </div>
+
   );
 }
 

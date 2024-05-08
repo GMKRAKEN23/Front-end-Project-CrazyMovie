@@ -3,7 +3,7 @@ import BurgerMenu from './BurgerMenu';
 
 function NavBar(){
     return(
-        <div className='flex'>
+        <div className='flex justify-between items-center mx-auto w-full'>
             <Logo/>
             <BurgerMenu />
         </div>

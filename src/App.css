@@ -98,3 +98,7 @@ body {
   width: 80%;
  
 }
+
+.spacing-burger{
+  margin-right: calc(20px + 1rem);
+}

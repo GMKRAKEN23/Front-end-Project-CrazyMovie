@@ -26,7 +26,7 @@ function Trending() {
 
   return (
     <div className="flex flex-col">
-      <h2 className="text-white tracking-wider text-center font-bold ml-6 lato text-2xl mb-4">Trending</h2>
+      <h2 className="text-white tracking-widest text-center font-bold ml-6 lato text-2xl mb-4">Trending</h2>
       {trendingMovies && trendingMovies.length > 0 ? (
         <Swiper
           effect={'coverflow'}
