@@ -80,3 +80,21 @@ body {
   font-variation-settings:
     "slnt" 0;
 }
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   max-height: 300px;
+}
+
+.swiper-slide img{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.swiper{
+  width: 80%;
+ 
+}

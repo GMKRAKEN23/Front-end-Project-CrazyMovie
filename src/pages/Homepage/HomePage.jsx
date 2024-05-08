@@ -1,5 +1,15 @@
-function content(){
-    return <h2>HomePage</h2>
+import ListMovies from "../../components/ListMovies";
+import Trending from "../../components/Trending";
+
+function Content({movies}){
+    return (
+        <>        
+        <Trending movies={movies}/>
+        <ListMovies movies={movies}/>
+        </>
+    )
+        
+
 }
 
-export default content;
+export default Content;
