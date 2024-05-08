@@ -15,7 +15,7 @@ function Trending() {
         const movies = await fetchTrendingMovies();
         setTrendingMovies(movies);
       } catch (error) {
-        console.error('Erreur lors de la récupération des films trending:', error);
+        console.error('Error while recovering trending movies:', error);
       }
     }
 

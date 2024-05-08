@@ -1,4 +1,4 @@
-const keyApi = '57131dfc3fa14e353286ee96079b63f4'; 
+import { keyApi } from "./Key_api";
 
 export async function fetchTopRatedMovies() {
   try {
@@ -7,11 +7,11 @@ export async function fetchTopRatedMovies() {
       const data = await response.json();
       return data.results;
     } else {
-      console.error('Erreur lors de la récupération des films mieux notés');
+      console.error('Error retrieving top rated movies');
       return [];
     }
   } catch (error) {
-    console.error('Erreur lors de la récupération des films mieux notés:', error);
+    console.error('Error retrieving top rated movies:', error);
     return [];
   }
 }

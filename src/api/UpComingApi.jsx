@@ -1,4 +1,4 @@
-const keyApi = '57131dfc3fa14e353286ee96079b63f4';
+import { keyApi } from "./Key_api";
 
 export async function fetchUpComingMovies() {
   try {
@@ -7,11 +7,11 @@ export async function fetchUpComingMovies() {
       const data = await response.json();
       return data.results;
     } else {
-      console.error('Erreur lors de la récupération des films upcoming');
+      console.error('Error while recovering upcoming movies');
       return [];
     }
   } catch (error) {
-    console.error('Erreur lors de la récupération des films Marvel:', error);
+    console.error('Error while recovering upcoming movies:', error);
     return [];
   }
 }

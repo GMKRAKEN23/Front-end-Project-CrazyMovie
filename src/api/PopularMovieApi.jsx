@@ -1,4 +1,4 @@
-const keyApi = '57131dfc3fa14e353286ee96079b63f4'; 
+import { keyApi } from "./Key_api";
 
 export async function fetchPopularMovies() {
   try {
@@ -7,11 +7,11 @@ export async function fetchPopularMovies() {
       const data = await response.json();
       return data.results;
     } else {
-      console.error('Erreur lors de la récupération des films populaires');
+      console.error('Error recovering popular movies');
       return [];
     }
   } catch (error) {
-    console.error('Erreur lors de la récupération des films populaires:', error);
+    console.error('Error recovering popular movies:', error);
     return [];
   }
 }

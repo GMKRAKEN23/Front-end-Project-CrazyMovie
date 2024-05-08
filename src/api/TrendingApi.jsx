@@ -1,4 +1,4 @@
-const keyApi = '57131dfc3fa14e353286ee96079b63f4';
+import { keyApi } from "./Key_api";
 
 export async function fetchTrendingMovies() {
   try {

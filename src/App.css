@@ -102,3 +102,8 @@ body {
 .spacing-burger{
   margin-right: calc(20px + 1rem);
 }
+
+.hovered svg path:hover,
+.hovered svg circle:hover {
+  fill: rgb(227, 124, 5);
+}
