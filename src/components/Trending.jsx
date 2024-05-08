@@ -1,46 +1,59 @@
+import  { useState, useEffect } from 'react';
+import { fetchTrendingMovies } from '../api/TrendingApi'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-function Trending({ movies }) {
-    const middleIndex = Math.floor(movies.length / 2);
+function Trending() {
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
-    return (
-        <div className="flex flex-col">
-            <h2 className="text-white tracking-wider text-left ml-6 lato text-xl mb-4">Trending</h2>
-            {movies && movies.length > 0 ? (
-                <Swiper
-                    effect={'coverflow'}
-                    autoplay={{ delay: 3500 }}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={'auto'}
-                    initialSlide={middleIndex}
-                    coverflowEffect={{
-                        stretch: 0,
-                        rotate: 0,
-                        depth: 100,
-                        modifier: 3.5,
-                    }}
-                    modules={[EffectCoverflow]}
-                >
-                    {movies.map(movie => (
-                        <SwiperSlide key={movie.id} className='swiper my-5'>
-                            <div className='rounded-xl w-auto h-full'>
-                               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='' /> 
-                            </div>
-                            
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const movies = await fetchTrendingMovies();
+        setTrendingMovies(movies);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des films trending:', error);
+      }
+    }
 
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    )
+    fetchData();
+  }, []);
+
+  const middleIndex = Math.floor(trendingMovies.length / 2);
+
+  return (
+    <div className="flex flex-col">
+      <h2 className="text-white tracking-wider text-center font-bold ml-6 lato text-2xl mb-4">Trending</h2>
+      {trendingMovies && trendingMovies.length > 0 ? (
+        <Swiper
+          effect={'coverflow'}
+          autoplay={{ delay: 3500 }}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={'auto'}
+          initialSlide={middleIndex}
+          coverflowEffect={{
+            stretch: 0,
+            rotate: 0,
+            depth: 100,
+            modifier: 3.5,
+          }}
+          modules={[EffectCoverflow]}
+        >
+          {trendingMovies.map(movie => (
+            <SwiperSlide key={movie.id} className='swiper my-5 rounded-xl'>
+              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='' /> 
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
 }
 
 export default Trending;
