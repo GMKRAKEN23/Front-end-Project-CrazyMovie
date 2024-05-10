@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Logo(){
     return (
         <>
-        <a href="#" className="cursor-pointer">
+        <Link to="/homepage" className="cursor-pointer">
             <img src="../src/assets/logo.png" className="w-[125px] h-[125px]" alt="logo_crazy_movie" />
-        </a>
+        </Link>
         </>
     )
 }

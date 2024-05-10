@@ -1,7 +1,8 @@
 import  { useState, useEffect } from 'react';
-import { fetchTrendingMovies } from '../api/TrendingApi'; 
+import { fetchTrendingMovies } from '../api/trendingApi'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow } from 'swiper/modules';
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -41,11 +42,13 @@ function Trending() {
             depth: 100,
             modifier: 3.5,
           }}
-          modules={[EffectCoverflow]}
+          modules={[EffectCoverflow, Autoplay]}
         >
           {trendingMovies.map(movie => (
             <SwiperSlide key={movie.id} className='swiper my-5 rounded-xl'>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='' /> 
+              <Link to={`/detailsmovies/${movie.id}/`}>
+              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+              </Link> 
             </SwiperSlide>
           ))}
         </Swiper>
