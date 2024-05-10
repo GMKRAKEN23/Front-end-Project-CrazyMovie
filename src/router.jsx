@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from './App'
-import DetailsMovies from "./pages/DetailsMovie/detailsMovie"
+import DetailsMovies from "./pages/DetailsMovie/DetailsMovie"
 import HomePage from "./pages/Homepage/HomePage"
+import WatchList from "./pages/Watchlist/WatchList"
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,11 @@ export const router = createBrowserRouter([
     {
         path: '/detailsmovies/:id',
         element: <DetailsMovies />,
+        caseSensitive: true,
+    },
+    {
+        path:'/watchlist',
+        element: <WatchList/>,
         caseSensitive: true,
     }
 ])

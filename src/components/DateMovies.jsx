@@ -20,7 +20,7 @@ function DateMovie() {
     }, [id]);
 
     return (
-        <p className="text-white">{date}</p>
+        <p className="text-white tracking-wider">{date} |</p>
     );
 }
 

@@ -20,7 +20,7 @@ function GenreMovie() {
     }, [id]);
 
     return (
-        <p className="text-white">{genre}</p>
+        <p className="text-white px-2 tracking-wider">{genre} |</p>
     );
 }
 

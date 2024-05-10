@@ -45,9 +45,9 @@ function Trending() {
           modules={[EffectCoverflow, Autoplay]}
         >
           {trendingMovies.map(movie => (
-            <SwiperSlide key={movie.id} className='swiper my-5 rounded-xl'>
+            <SwiperSlide key={movie.id} className='swiper my-5 rounded-xl' >
               <Link to={`/detailsmovies/${movie.id}/`}>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='rounded-xl'/>
               </Link> 
             </SwiperSlide>
           ))}
