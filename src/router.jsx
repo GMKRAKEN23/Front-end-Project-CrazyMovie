@@ -3,6 +3,7 @@ import App from './App'
 import DetailsMovies from "./pages/DetailsMovie/DetailsMovie"
 import HomePage from "./pages/Homepage/HomePage"
 import WatchList from "./pages/Watchlist/WatchList"
+import SearchMovie from "./pages/SearchMovie/SearchMovie"
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
     {
         path:'/watchlist',
         element: <WatchList/>,
+        caseSensitive: true,
+    },
+    {
+        path:'/searchmovie',
+        element: <SearchMovie/>,
         caseSensitive: true,
     }
 ])

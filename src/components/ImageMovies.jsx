@@ -24,7 +24,7 @@ function ImageMovie() {
     return (
         <div>
             {imageUrl ? (
-                <img src={imageUrl} alt="Movie Poster" className="" />
+                <img src={imageUrl} alt="Movie Poster" className="h-[55vh] w-full" />
             ) : (
                 <p className="text-white">Image non disponible</p>
             )}
