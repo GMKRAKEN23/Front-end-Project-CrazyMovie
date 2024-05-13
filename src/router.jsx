@@ -30,5 +30,5 @@ export const router = createBrowserRouter([
         path:'/searchmovie',
         element: <SearchMovie/>,
         caseSensitive: true,
-    }
+    },
 ])
