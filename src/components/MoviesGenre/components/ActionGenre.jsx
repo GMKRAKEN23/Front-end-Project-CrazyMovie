@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { fetchActionMovies } from "../../../api/MovieActionApi";
 
 function ActionMovies() {
@@ -29,7 +29,9 @@ function ActionMovies() {
             >
                 {actionMovies.map(movie => (
                     <SwiperSlide key={movie.id}>
+                        <Link to={`/detailsmovies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} className="rounded-lg cursor-pointer w-[20em] h-[10em]" />
+                       </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

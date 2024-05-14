@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react";
 import { fetchFantasyMovies } from '../../../api/MovieFantasy';
+import { Link } from 'react-router-dom';
 
 function FantasyGenre() {
     const [fantasyMovies, setFantasyMovies] = useState([]);
@@ -28,7 +29,9 @@ function FantasyGenre() {
             >
                 {fantasyMovies.map(movie => (
                     <SwiperSlide key={movie.id}>
+                        <Link to={`/detailsmovies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className='rounded-lg cursor-pointer w-[20em] h-[10em]'/>
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

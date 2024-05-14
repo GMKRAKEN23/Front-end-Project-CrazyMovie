@@ -12,7 +12,7 @@ function ListMovies({ movies }) {
   };
 
   return (
-    <div className="my-5">
+    <div className="my-5 pb-[3rem]">
       <div className="w-full flex justify-around my-5 mx-auto">
         <Link to='/' className={`lato text-lg tracking-widest font-bold ${activeLink === 'Popular' ? 'text-orange-600' : 'text-white'}`} onClick={() => handleTabChange('Popular')}>Popular</Link>
         <Link to='/' className={`lato text-lg tracking-widest font-bold ${activeLink === 'TopRated' ? 'text-orange-600' : 'text-white'}`} onClick={() => handleTabChange('TopRated')}>Top Rated</Link>
