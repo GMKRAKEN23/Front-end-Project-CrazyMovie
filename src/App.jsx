@@ -1,4 +1,4 @@
-import NavBar from './components/Header/NavBar'
+import Header from './components/Header/Header'
 import Content from '../src/pages/Homepage/HomePage'
 import NavBarBottom from './components/NavBarBottom/NavBarBottom'
 import './App.css'
@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <>
-    <NavBar />
+    <Header />
     <Content />
     <NavBarBottom/>
     </>

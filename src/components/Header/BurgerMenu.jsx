@@ -1,10 +1,10 @@
 import { Spin as Hamburger } from 'hamburger-react'
 import { useState } from 'react';
 
-function BurgerMenu() {
+function BurgerMenu({toggleNavBar}) {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div className='spacing-burger'>
+    <div className='spacing-burger' onClick={toggleNavBar}>
       <Hamburger
         toggled={isOpen}
         toggle={setOpen}
