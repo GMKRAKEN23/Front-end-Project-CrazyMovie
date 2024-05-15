@@ -7,7 +7,7 @@ async function fetchMovieGenre(movieId) {
         
         if (data.genres && Array.isArray(data.genres) && data.genres.length > 0) {
 
-            const maxGenres = data.genres.slice(0, 2);
+            const maxGenres = data.genres.slice(0, 1);
             const genreNames = maxGenres.map(genre => genre.name);
 
             return genreNames.join(', ');

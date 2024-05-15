@@ -21,9 +21,9 @@ function Rating() {
     }, [id]);
 
     return (
-        <div className="cursor-pointer flex items-center w-14 h-7 bg-lime-600 rounded-xl">
-            <i className='bx bxs-star text-base text-orange-600 px-1'></i>
-            <p className='text-orange-600 font-bold'>{voteAverage}</p>
+        <div className="absolute flex items-center bg-black cursor-pointer bottom-4 right-12 w-14 h-7 rounded-xl">
+            <i className='px-1 text-base text-white bx bxs-star'></i>
+            <p className='font-bold text-white '>{voteAverage}</p>
         </div>
     );
 }

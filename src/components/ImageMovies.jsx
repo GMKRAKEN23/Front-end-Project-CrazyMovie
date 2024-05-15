@@ -22,9 +22,9 @@ function ImageMovie() {
     }, [id]);
 
     return (
-        <div>
+        <div className="">
             {imageUrl ? (
-                <img src={imageUrl} alt="Movie Poster" className="h-[55vh] w-full" />
+                <img src={imageUrl} alt="Movie Poster" className="w-4/5 mx-auto rounded-xl" />
             ) : (
                 <p className="text-white">Image non disponible</p>
             )}

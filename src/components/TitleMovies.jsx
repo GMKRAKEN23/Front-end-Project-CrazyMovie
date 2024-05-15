@@ -20,7 +20,7 @@ function TitleMovie() {
     }, [id]);
 
     return (
-        <p className="text-white">{title}</p>
+        <p className="my-4 text-lg font-bold text-center text-white">{title}</p>
     );
 }
 

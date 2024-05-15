@@ -5,22 +5,27 @@ import DateMovie from "../../components/DateMovies";
 import GenreMovie from "../../components/GenreMovies";
 import TimeMovies from "../../components/TimeMovies";
 import ImageMovie from "../../components/ImageMovies";
+import OverviewMovie from "../../components/OverviewMovie";
 
 function DetailsMovies() {
 
     return (
         <div>
             <NavBarDetailsMovie />
-            <ImageMovie />
-            <Rating />
             <TitleMovie />
-            <div className="flex justify-center w-full w-11/12 mx-auto my-5">
+            <div className="relative">
+                <ImageMovie />
+                <Rating />
+            </div>
+
+            <div className="flex justify-center w-11/12 w-full mx-auto my-5">
                 <DateMovie />
                 <GenreMovie />
                 <TimeMovies />
             </div>
-            </div>
-            )
+            <OverviewMovie />
+        </div>
+    )
 }
 
- export default DetailsMovies;
+export default DetailsMovies;
