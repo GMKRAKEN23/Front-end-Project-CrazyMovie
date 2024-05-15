@@ -44,7 +44,7 @@ function ActionMovies({ enableSwiper }) {
                 </Swiper>
             )}
             {!shouldRenderSwiper && ( 
-                <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex flex-wrap justify-center gap-8 pb-[5rem]">
                     {actionMovies.map(movie => (
                         <Link to={`/detailsmovies/${movie.id}`} key={movie.id}>
                             <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} className="rounded-lg cursor-pointer w-[9em] h-[13em]" />

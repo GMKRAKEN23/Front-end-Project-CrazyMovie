@@ -43,7 +43,7 @@ function HorrorGenre({ useSwiper = true }) {
             ) : horrorMovies.length > 0 ? (
                 <div className="mt-10">
                     <h2 className="m-5 text-2xl text-center text-white">Horreur</h2>
-                    <div className="flex flex-wrap justify-center gap-8">
+                    <div className="flex flex-wrap justify-center gap-8 pb-[5rem]">
                         {horrorMovies.map(movie => (
                             <Link to={`/detailsmovies/${movie.id}`} key={movie.id}>
                                 <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className='rounded-lg cursor-pointer w-[9em] h-[13em]' />
