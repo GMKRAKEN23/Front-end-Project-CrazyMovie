@@ -13,12 +13,12 @@ function ListMovies({ movies }) {
 
   return (
     <div className="my-5 pb-[3rem]">
-      <div className="w-full flex justify-around my-5 mx-auto">
+      <div className="flex justify-around w-full my-5">
         <Link to='/' className={`lato text-lg tracking-widest font-bold ${activeLink === 'Popular' ? 'text-orange-600' : 'text-white'}`} onClick={() => handleTabChange('Popular')}>Popular</Link>
         <Link to='/' className={`lato text-lg tracking-widest font-bold ${activeLink === 'TopRated' ? 'text-orange-600' : 'text-white'}`} onClick={() => handleTabChange('TopRated')}>Top Rated</Link>
         <Link to='/' className={`lato text-lg tracking-widest font-bold ${activeLink === 'UpComing' ? 'text-orange-600' : 'text-white'}`} onClick={() => handleTabChange('UpComing')}>Upcoming</Link>
       </div>
-      <div className="my-4 mx-10">
+      <div className="mx-5 my-4">
         <div className={`${activeLink === 'Popular' ? 'block' : 'hidden'}`}>
           <MovieItemsPopular movies={movies} />
         </div>

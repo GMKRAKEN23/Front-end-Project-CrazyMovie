@@ -6,13 +6,13 @@ function NavBarBottom() {
 
     return (
         
-        <div className="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-white border left-1/2 border-gray-600 ">
+        <div className="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-white border border-gray-600 left-1/2 ">
             <div className="grid h-full grid-cols-3 mx-auto">
-                <button data-tooltip-target="tooltip-home" type="button" className="inline-flex flex-col items-center justify-center px-5 hover:bg-white group">
+                <button data-tooltip-target="tooltip-home" type="button" className="inline-flex flex-col items-center justify-center px-5">
                 <Link to="/homepage"><i className={`bx bxs-home-alt-2 text-4xl cursor-pointer ${location.pathname === "/" || location.pathname === "/homepage" ? "text-orange-600" : ""}`}></i></Link>
                 </button>
                 <div className="flex items-center justify-center">
-                    <button data-tooltip-target="tooltip-new" type="button" className="inline-flex items-center justify-center w-10 h-10 font-bold hover:bg-white rounded-full focus:outline-none">
+                    <button data-tooltip-target="tooltip-new" type="button" className="inline-flex items-center justify-center w-10 h-10 font-bold rounded-full hover:bg-white focus:outline-none">
                     <Link to="/searchmovie"><i className={`bx bx-search text-4xl cursor-pointer ${location.pathname === "/searchmovie" ? "text-orange-600" : ""}`}></i></Link>
                     </button>
                 </div>
@@ -25,4 +25,4 @@ function NavBarBottom() {
     )
 }
 
-export default NavBarBottom
+export default NavBarBottom;

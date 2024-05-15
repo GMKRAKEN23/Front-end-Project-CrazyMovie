@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
 
-function NavBar({ active }) {
+function NavBar(
+    {   active, 
+        onActionClick, 
+        onComedyClick, 
+        onFamilyClick, 
+        onFantasyClick, 
+        onDramaClick, 
+        onHorrorClick, 
+        onScienceFictionClick
+    }
+    ) {
     return (
         <div className={`${active ? "block" : "hidden"} absolute h-full top-32 bg-black w-full z-10`}>
-            <ul className="list-none flex flex-col items-stard">
-                <Link><li className="text-white text-2xl mb-3 pl-10">Action</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Comedy</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Family</li></Link>      
-                <Link><li className="text-white text-2xl my-3 pl-10">Animation</li></Link>          
-                <Link><li className="text-white text-2xl my-3 pl-10">Fantasy</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Drama</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Thriller</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Adventure</li></Link>
-                <Link><li className="text-white text-2xl my-3 pl-10">Science Fiction</li></Link>
+            <ul className="flex flex-col list-none items-stard">
+                <Link to='/searchmovie/action'><li className="pl-10 mb-3 text-2xl text-white" onClick={onActionClick}>Action</li></Link>
+                <Link to='/searchmovie/comedy'><li className="pl-10 my-3 text-2xl text-white" onClick={onComedyClick}>Comedy</li></Link>
+                <Link to='/searchmovie/family'><li className="pl-10 my-3 text-2xl text-white" onClick={onFamilyClick}>Family</li></Link>                
+                <Link to='/searchmovie/fantasy'><li className="pl-10 my-3 text-2xl text-white" onClick={onFantasyClick}>Fantasy</li></Link>
+                <Link to='/searchmovie/drama'><li className="pl-10 my-3 text-2xl text-white" onClick={onDramaClick}>Drama</li></Link>
+                <Link to='/searchmovie/horror'><li className="pl-10 my-3 text-2xl text-white" onClick={onHorrorClick}>Horror</li></Link>
+                <Link to='/searchmovie/sciencefiction'><li className="pl-10 my-3 text-2xl text-white" onClick={onScienceFictionClick}>Science Fiction</li></Link>
             </ul>
-
         </div>
     )
 }
