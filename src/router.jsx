@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path: '/detailsmovies/:id',
+        path: `/detailsmovies/:id`,
         element: <DetailsMovies />,
         caseSensitive: true,
     },

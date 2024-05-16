@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { fetchTrendingMovies } from '../api/trendingApi'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
@@ -27,7 +27,7 @@ function Trending() {
 
   return (
     <div className="flex flex-col">
-      <h2 className="text-white tracking-widest text-center font-bold ml-6 lato text-2xl mb-4">Trending</h2>
+      <h2 className="mb-4 ml-6 text-2xl font-bold tracking-widest text-center text-white lato">Trending</h2>
       {trendingMovies && trendingMovies.length > 0 ? (
         <Swiper
           effect={'coverflow'}
@@ -45,9 +45,9 @@ function Trending() {
           modules={[EffectCoverflow, Autoplay]}
         >
           {trendingMovies.map(movie => (
-            <SwiperSlide key={movie.id} className='swiper my-5 rounded-xl' >
+            <SwiperSlide key={movie.id} className='my-5 swiper rounded-xl' >
               <Link to={`/detailsmovies/${movie.id}/`}>
-                   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='rounded-xl'/>
+                   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className='object-cover rounded-xl'/>
               </Link> 
             </SwiperSlide>
           ))}
