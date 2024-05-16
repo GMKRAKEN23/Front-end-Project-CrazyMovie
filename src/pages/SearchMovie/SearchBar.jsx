@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { keyApi } from "../../api/Key_api";
 
 function SearchBar() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -12,15 +11,15 @@ function SearchBar() {
     const handleSearchSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${keyApi}&query=${searchTerm}`);
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEYY}&query=${searchTerm}`);
             if (!response.ok) {
-                throw new Error('Erreur lors de la recherche de films');
+                throw new Error('Error searching for movies');
             }
             const data = await response.json();
             const filteredResults = data.results.filter(movie => movie.poster_path); // Filtrer les films sans affiche officielle
             setMovieResults(filteredResults);
         } catch (error) {
-            console.error('Erreur lors de la recherche de films:', error);
+            console.error('Error searching for movies', error);
         }
     };
 

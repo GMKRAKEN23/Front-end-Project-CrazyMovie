@@ -12,7 +12,7 @@ function FantasyGenre({ useSwiper = true }) {
                 const movies = await fetchFantasyMovies();
                 setFantasyMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films de fantasy :', error);
+                console.error('Error recovering Fantasy movies:', error);
             }
         }
         fetchData();

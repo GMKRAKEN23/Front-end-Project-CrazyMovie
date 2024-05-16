@@ -12,7 +12,7 @@ function FamilyGenre({ useSwiper = true }) {
                 const movies = await fetchFamilyMovies();
                 setFamilyMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films de famille :', error);
+                console.error('Error recovering Family movies:', error);
             }
         }
         fetchData();

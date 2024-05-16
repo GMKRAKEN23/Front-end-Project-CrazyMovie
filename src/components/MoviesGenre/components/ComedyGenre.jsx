@@ -12,7 +12,7 @@ function ComedyGenre({ useSwiper = true }) {
                 const movies = await fetchComedyMovies();
                 setComedyMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films de comédie :', error);
+                console.error('Error recovering Comedy movies :', error);
             }
         }
         fetchData();

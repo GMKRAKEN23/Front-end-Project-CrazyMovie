@@ -12,8 +12,7 @@ function TitleMovie() {
                 const title = await fetchMovieTitle(id);
                 setTitle(title);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la note du film :', error);
-                setTitle('Erreur lors de la récupération de la note');
+                console.error('Error recovering Title movies', error);
             }
         }
         fetchTitleMovie();

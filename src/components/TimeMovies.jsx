@@ -12,15 +12,14 @@ function TimeMovie() {
                 const runtime = await fetchMovieTime(id);
                 setRuntime(runtime);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la durée du film :', error);
-                setRuntime('Erreur lors de la récupération de la durée du film');
+                console.error('Error recovering Time movies :', error);
             }
         }
         fetchMovieRuntime(); // Utilisez fetchMovieRuntime ici
     }, [id]);
 
     return (
-        <p className="text-white tracking-wider">{runtime} Minutes</p> // Utilisez runtime ici
+        <p className="tracking-wider text-white">{runtime} Minutes</p> // Utilisez runtime ici
     );
 }
 

@@ -1,8 +1,6 @@
-import { keyApi } from "./Key_api";
-
 async function fetchMovieGenre(movieId) {
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${keyApi}`);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${import.meta.env.VITE_API_KEY}`);
         const data = await response.json();
         
         if (data.genres && Array.isArray(data.genres) && data.genres.length > 0) {
@@ -13,10 +11,10 @@ async function fetchMovieGenre(movieId) {
             return genreNames.join(', ');
             
         } else {
-            throw new Error("Aucun genre trouvé dans la réponse de l'API ou genres est null.");
+            throw new Error("No gender found in API response.");
         }
     } catch (error) {
-        console.error('Erreur lors de la récupération des genres des films :', error);
+        console.error('Error when retrieving movie genres:', error);
         throw error;
     }
 }

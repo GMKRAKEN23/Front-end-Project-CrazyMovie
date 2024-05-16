@@ -12,7 +12,7 @@ function HorrorGenre({ useSwiper = true }) {
                 const movies = await fetchHorrorMovies();
                 setHorrorMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films d\'horreur :', error);
+                console.error('Error recovering Horror movies :', error);
             }
         }
         fetchData();

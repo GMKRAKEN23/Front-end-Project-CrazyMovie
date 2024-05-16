@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { fetchDramaMovies } from '../../../api/MovieDrame';
+import { fetchDramaMovies } from '../../../api/MovieDrama';
 
 function DramaGenre({ useSwiper = true }) {
     const [dramaMovies, setDramaMovies] = useState([]);
@@ -12,7 +12,7 @@ function DramaGenre({ useSwiper = true }) {
                 const movies = await fetchDramaMovies();
                 setDramaMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films de drame :', error);
+                console.error('Error recovering Drama movies:', error);
             }
         }
         fetchData();

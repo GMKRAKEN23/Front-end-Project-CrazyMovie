@@ -12,8 +12,7 @@ function OverviewMovie() {
                 const overview = await fetchMovieOverview(id);
                 setOverview(overview);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la note du film :', error);
-                setOverview('Erreur lors de la récupération de la note');
+                console.error('Error recovering Overview movies', error);
             }
         }
         fetchTitleMovie();

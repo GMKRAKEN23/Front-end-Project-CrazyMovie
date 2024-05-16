@@ -12,15 +12,14 @@ function DateMovie() {
                 const releaseDate = await fetchMovieDate(id);
                 setDate(releaseDate);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la date de sortie du film :', error);
-                setDate('Erreur lors de la récupération de la date de sortie');
+                console.error('Error recovering Date movies:', error);
             }
         }
         fetchReleaseDate();
     }, [id]);
 
     return (
-        <p className="text-white tracking-wider">{date} |</p>
+        <p className="tracking-wider text-white">{date} |</p>
     );
 }
 

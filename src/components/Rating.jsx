@@ -13,8 +13,7 @@ function Rating() {
                 const formattedAverage = average.toFixed(1);
                 setVoteAverage(formattedAverage);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la note du film :', error);
-                setVoteAverage('Erreur lors de la récupération de la note');
+                console.error('Error recovering rating movies:', error);
             }
         }
         fetchVoteAverage();

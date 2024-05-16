@@ -12,7 +12,7 @@ function ActionMovies({ enableSwiper }) {
                 const movies = await fetchActionMovies();
                 setActionMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films d\'action :', error);
+                console.error('Error recovering Action movies :', error);
             }
         }
         fetchData();

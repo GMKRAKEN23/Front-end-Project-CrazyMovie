@@ -12,8 +12,7 @@ function GenreMovie() {
                 const genre = await fetchMovieGenre(id);
                 setGenre(genre);
             } catch (error) {
-                console.error('Erreur lors de la récupération de la note du film :', error);
-                setGenre('Erreur lors de la récupération de la note');
+                console.error('Error recovering Genre movies:', error);
             }
         }
         fetchGenreMovie();

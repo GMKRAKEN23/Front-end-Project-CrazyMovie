@@ -12,7 +12,7 @@ function ScienceFictionGenre({ useSwiper = true }) {
                 const movies = await fetchScienceFictionMovies();
                 setScienceFictionMovies(movies);
             } catch (error) {
-                console.error('Erreur lors de la récupération des films de science-fiction :', error);
+                console.error('Error recovering Science Fiction movies:', error);
             }
         }
         fetchData();

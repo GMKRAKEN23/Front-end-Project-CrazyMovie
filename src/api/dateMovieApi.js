@@ -1,8 +1,6 @@
-import { keyApi } from "./Key_api";
-
 async function fetchMovieDate(movieId) {
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${keyApi}`);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${import.meta.env.VITE_API_KEY}`);
         const data = await response.json();
         
         if (data.release_date !== undefined) {
@@ -10,10 +8,10 @@ async function fetchMovieDate(movieId) {
             const releaseYear = new Date(data.release_date).getFullYear();
             return releaseYear.toString();
         } else {
-            throw new Error("La propriété date de sortie n'est pas présente dans la réponse de l'API.");
+            throw new Error("The release date is not present in the API response.");
         }
     } catch (error) {
-        console.error('Erreur lors de la récupération des dates de sortie des films :', error);
+        console.error('Error retrieving movie release dates:', error);
         throw error;
     }
 }

@@ -17,7 +17,6 @@ function DetailsMovies() {
                 <ImageMovie />
                 <Rating />
             </div>
-
             <div className="flex justify-center w-11/12 w-full mx-auto my-5">
                 <DateMovie />
                 <GenreMovie />

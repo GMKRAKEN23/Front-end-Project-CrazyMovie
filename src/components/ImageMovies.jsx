@@ -14,7 +14,7 @@ function ImageMovie() {
                 const fullImageUrl = `${baseUrl}${imagePath}`;
                 setImageUrl(fullImageUrl);
             } catch (error) {
-                console.error('Erreur lors de la récupération image du film :', error);
+                console.error('Error recovering Image movies:', error);
                 setImageUrl(null); 
             }
         }
