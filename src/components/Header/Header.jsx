@@ -11,7 +11,7 @@ function Header(){
     };
 
     return(
-        <div className='flex justify-between items-center mx-auto w-full'>
+        <div className='flex items-center justify-between w-full mx-auto'>
             <Logo/>
             <BurgerMenu toggleNavBar={toggleNavBar}/>
             <NavBar active={navBarActive}/>

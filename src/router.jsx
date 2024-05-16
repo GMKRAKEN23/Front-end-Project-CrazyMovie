@@ -5,11 +5,13 @@ import HomePage from "./pages/Homepage/HomePage"
 import WatchList from "./pages/Watchlist/WatchList"
 import SearchMovie from "./pages/SearchMovie/SearchMovie"
 import ContainerMovie from "./pages/SearchMovie/ContainerMovie"
+import ErrorPage from "./pages/ErrorPage/ErrorPage"
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement : <ErrorPage/>,
         children:[
             {
                 path: '/homepage',
