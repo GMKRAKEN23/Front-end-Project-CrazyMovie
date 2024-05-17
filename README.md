@@ -7,7 +7,7 @@
 </div>
 
 ## Description 
-Here is the link to the project hosted on Vercel : front-end-project-crazy-movie.vercel.app
+Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)
 
 ## Librairies 
 1. SWIPER.JS  
