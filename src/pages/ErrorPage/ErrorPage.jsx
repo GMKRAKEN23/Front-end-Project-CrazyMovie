@@ -1,4 +1,5 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import Logo from "../../components/Logo";
 
 function ErrorPage() {
     const error = useRouteError();
@@ -8,27 +9,60 @@ function ErrorPage() {
         console.log("C'est une RouteErrorResponse avec le statut :", error.status);
 
         if (error.status === 400) {
-            return <div>Cette page n&apos;existe pas</div>;
+            return (
+                <div className="flex items-center justify-center h-screen">
+                    <div>
+                        <div className="flex items-center justify-center mb-5">
+                            <Logo />
+                        </div>
+                        <h1 className="text-white">Error 400</h1>
+                        <h2 className="font-bold text-white">This page does not exist!</h2>
+                    </div>
+                </div>
+            );
         }
         if (error.status === 401) {
-            return <div>Vous n&apos;êtes pas autorisé à voir cette page.</div>;
+            return (
+                <div className="flex items-center justify-center h-screen">
+                    <div>
+                        <div className="flex items-center justify-center mb-5">
+                            <Logo />
+                        </div>
+                        <h1 className="my-8 text-4xl tracking-widest text-white">Error 401</h1>
+                        <h2 className="text-xl font-bold tracking-widest text-white">You are not authorized to view this page!</h2>
+                    </div>
+                </div>
+            );
         }
         if (error.status === 404) {
-            return <div>La Page que vous chercher n&apos;est pas trouvable !</div>;
+            return (
+                <div className="flex items-center justify-center h-screen text-center">
+                    <div>
+                        <div className="flex items-center justify-center mb-5">
+                            <Logo />
+                        </div>
+                        <h1 className="my-8 text-4xl tracking-widest text-white">Error <span className="font-bold text-orange-600 ">404</span></h1>
+                        <h2 className="text-xl font-bold leading-loose tracking-widest text-white">The Page You Are <br />Looking For Cannot Be Found!</h2>
+                    </div>
+                </div>
+            );
         }
         if (error.status === 503) {
-            return <div>Service indisponible. Veuillez réessayer plus tard.</div>;
+            return (
+                <div className="flex items-center justify-center h-screen text-center">
+                    <div>
+                        <div className="flex items-center justify-center mb-5">
+                            <Logo />
+                        </div>
+                        <h1 className="my-8 text-4xl tracking-widest text-white">Error 503</h1>
+                        <h2 className="text-xl font-bold leading-loose tracking-widest text-white">Service unavailable. Please try again later !</h2>
+                    </div>
+                </div>
+            );
         }
 
-        return <div>Erreur {error.status}: {error.statusText}</div>;
+        return <div>Error {error.status}: {error.statusText}</div>;
     }
-
-    return (
-        <>
-            <h2 className="text-white">Erreur</h2>
-            <p className="text-white">{error.message || error.status}</p>
-        </>
-    );
 }
 
 export default ErrorPage;
