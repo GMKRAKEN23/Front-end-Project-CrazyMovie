@@ -1,9 +1,11 @@
 # Front-End-Project-CrazyMovie
 ## Project CrazyMovie, a user-friendly movie app for everyone!
-<p align="center">
-  <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/7c0bd02f-7dd3-4bfa-9530-e1f77facb1d6" alt="Homepage_CrazyMovie" style="margin-right: 20px;">
-  <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/bddb5958-6736-41db-9b05-0d58dcc2ee61" alt="Détails_Movie_CrazyMovie">
-</p>
+<div align="center">
+  <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/7c0bd02f-7dd3-4bfa-9530-e1f77facb1d6" alt="Homepage_CrazyMovie";">
+  <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/bddb5958-6736-41db-9b05-0d58dcc2ee61" alt="Détails_Movie_CrazyMovie";">
+  <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/d20a54a9-84bb-4f56-8e99-d0938ca244e8" alt="Search_SCrazyMovie">
+</div>
+
 
 ## Description 
 
