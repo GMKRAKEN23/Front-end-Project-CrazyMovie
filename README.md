@@ -6,7 +6,6 @@
   <img src="https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/d20a54a9-84bb-4f56-8e99-d0938ca244e8" alt="Search_SCrazyMovie">
 </div>
 
-
 ## Description 
 
 ## Librairies 
