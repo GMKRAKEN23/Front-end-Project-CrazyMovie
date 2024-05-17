@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { fetchScienceFictionMovies } from '../../../api/MovieScienceFiction';
+import { fetchScienceFictionMovies } from '../../../api/MovieScienceFictionApi';
 
 function ScienceFictionGenre({ useSwiper = true }) {
     const [scienceFictionMovies, setScienceFictionMovies] = useState([]);

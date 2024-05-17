@@ -11,12 +11,12 @@ function SearchBar() {
     const handleSearchSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEYY}&query=${searchTerm}`);
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${searchTerm}`);
             if (!response.ok) {
                 throw new Error('Error searching for movies');
             }
             const data = await response.json();
-            const filteredResults = data.results.filter(movie => movie.poster_path); // Filtrer les films sans affiche officielle
+            const filteredResults = data.results.filter(movie => movie.poster_path); 
             setMovieResults(filteredResults);
         } catch (error) {
             console.error('Error searching for movies', error);
@@ -39,10 +39,12 @@ function SearchBar() {
                     </svg>
                 </button>
             </div>
-            <div className="mt-4 ">
+            <div className="grid w-3/4 grid-cols-2 gap-4 mx-auto mt-4">
                 {movieResults.map((movie) => (
-                    <div key={movie.id}>
-                        <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="mt-4 rounded-lg cursor-pointer w-[10em] h-[10em] text-center" />
+                    <div key={movie.id} className="flex flex-col items-center">
+                        <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="mt-4 rounded-lg cursor-pointer w-[10em] h-[10em]" />
+                        <p className="mt-2 tracking-wider text-center text-white">{movie.title}</p>
+                        <p className="text-orange-600">({new Date(movie.release_date).getFullYear()})</p>
                     </div>
                 ))}
             </div>

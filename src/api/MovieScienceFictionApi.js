@@ -1,6 +1,6 @@
 async function fetchScienceFictionMovies() {
     try {
-        const genresResponse = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${import.meta.env.VITE_API_KEY}}`);
+        const genresResponse = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${import.meta.env.VITE_API_KEY}`);
         const genresData = await genresResponse.json();
         const scienceFictionGenre = genresData.genres.find(genre => genre.name === "Science Fiction");
         if (!scienceFictionGenre) {
