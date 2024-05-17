@@ -11,12 +11,12 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        errorElement : <ErrorPage/>,
-        children:[
+        errorElement: <ErrorPage />,
+        children: [
             {
                 path: '/homepage',
-            element: <HomePage />
-            } 
+                element: <HomePage />
+            }
         ]
     },
     {
@@ -25,48 +25,48 @@ export const router = createBrowserRouter([
         caseSensitive: true,
     },
     {
-        path:'/watchlist',
-        element: <WatchList/>,
+        path: '/watchlist',
+        element: <WatchList />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie',
-        element: <SearchMovie/>,
+        path: '/searchmovie',
+        element: <SearchMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/action',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/action',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/comedy',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/comedy',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/drama',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/drama',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/family',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/family',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/fantasy',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/fantasy',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/horror',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/horror',
+        element: <ContainerMovie />,
         caseSensitive: true,
     },
     {
-        path:'/searchmovie/sciencefiction',
-        element: <ContainerMovie/>,
+        path: '/searchmovie/sciencefiction',
+        element: <ContainerMovie />,
         caseSensitive: true,
     }
 ])
