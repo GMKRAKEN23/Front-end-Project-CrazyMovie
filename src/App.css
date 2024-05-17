@@ -1,9 +1,15 @@
-#root {
-  max-width: 1280px;
+:root{
+  margin: 0 auto;
 }
-  
+
 body {
   background: hsl(0, 0%, 4%);
+  min-height: 100vh;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .lato-thin {
@@ -73,4 +79,31 @@ body {
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   max-height: 300px;
+}
+
+.swiper-slide img{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.swiper{
+  width: 80%;
+ 
+}
+
+.spacing-burger{
+  margin-right: calc(20px + 1rem);
+}
+
+.hovered svg path:hover,
+.hovered svg circle:hover {
+  fill: rgb(227, 124, 5);
 }

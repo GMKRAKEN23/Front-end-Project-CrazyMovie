@@ -1,13 +1,17 @@
+import Header from './components/Header/Header'
+import Content from '../src/pages/Homepage/HomePage'
+import NavBarBottom from './components/NavBarBottom/NavBarBottom'
 import './App.css'
+
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl text-white font-bold underline">
-        Hello world!
-      </h1>
+    <Header />
+    <Content />
+    <NavBarBottom/>
     </>
   )
 }
 
-export default App
+export default App;
