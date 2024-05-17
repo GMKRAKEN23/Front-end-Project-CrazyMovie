@@ -1,5 +1,6 @@
 # Front-End-Project-CrazyMovie
 ## Project CrazyMovie, a user-friendly movie app for everyone!
+![ScreenShot CrazyMovie](https://github.com/GMKRAKEN23/Front-end-Project-CrazyMovie/assets/149949090/0be928bb-8864-440c-9edb-2fe6ae425878)
 
 ## Description 
 
