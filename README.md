@@ -7,17 +7,50 @@
 </div>
 
 ## Description 
-Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)
+Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)   
+
+The CrazyMovie app is a web app built with React that allows users to follow movie news and search for information about any movie.
+
+The application is divided into 4 principal parts:
+1. La homepage
+2. Details movie
+3. Search movie
+4. Watchlist
+5. ErrorPage
+
+1. The Homepage contains 2 components: 
+The Trending component which contains trending movies.
+The ListMovies component which allows you to watch 3 categories of films:
+a) popular films 
+b) top rated 
+c) upcoming films
+
+2. The movie detail page allows you to see the most important details of the movie like :
+a) rating
+b) genre
+c) release date
+d) duration
+e) preview
+
+Note : I used the slice method (JavaScript) to limit the number of films to 18 for each section allowing a more simplified and easy search for the user.
+
+3. The search movie page contains 2 components:
+The SearchBar component allows you to search for any movie from an API call (TMDB).
+The ContainerGenre component allows you to search for films in their respective categories. Each category contains a carousel that allows you to swipe to the right and choose the films that interest you the most.
+
+5. The errorPage displays an appropriate elegant message based on the HTTP error code : 400, 401, 404, 503. 
+
+## Technologies
+1. REACT.JS
+2. JAVASCRIPT
+4. TAILWIND CSS 
+5. CANVA
+6. CSS
 
 ## Librairies 
 1. SWIPER.JS  
 2. HAMBURGER-REACT
 3. REACT-ROUTER-DOM
 
-## Technologies
-1. JSX
-2. CSS
-3. TAILWIND CSS
-4. JAVASCRIPT 
-5. REACT.JS
-6. CANVA
+## API
+1. The Movie Database (TMDB)
