@@ -29,7 +29,7 @@ function App() {
           <NavBarBottom />
         </>
       ) : (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div className='flex items-center justify-center h-screen'>
           <Logo/>
           <h1 className='text-5xl text-white'>Mobile version only available!</h1>
         </div>
