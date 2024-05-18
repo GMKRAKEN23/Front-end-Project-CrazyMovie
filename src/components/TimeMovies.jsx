@@ -4,10 +4,10 @@ import { fetchMovieTime } from "../api/runTimeApi";
 
 function TimeMovie() {
     const { id } = useParams(); 
-    const [runtime, setRuntime] = useState(null); // Utilisez runtime plutôt que time
+    const [runtime, setRuntime] = useState(null);
 
     useEffect(() => {
-        async function fetchMovieRuntime() { // Renommez la fonction pour éviter la confusion
+        async function fetchMovieRuntime() { 
             try {
                 const runtime = await fetchMovieTime(id);
                 setRuntime(runtime);
@@ -15,11 +15,11 @@ function TimeMovie() {
                 console.error('Error recovering Time movies :', error);
             }
         }
-        fetchMovieRuntime(); // Utilisez fetchMovieRuntime ici
+        fetchMovieRuntime(); 
     }, [id]);
 
     return (
-        <p className="tracking-wider text-white">{runtime} Minutes</p> // Utilisez runtime ici
+        <p className="tracking-wider text-white">{runtime} Minutes</p> 
     );
 }
 

@@ -12,7 +12,11 @@ function NavBar(
     }
     ) {
     return (
+<<<<<<< HEAD
         <div className={`${active ? "block" : "hidden"} absolute h-full top-32 bg-[#0a0a0a] w-full z-10`}>
+=======
+        <div className={`${active ? "block" : "hidden"} absolute h-full top-32 bg-[#0a0a0a] h-[101em] w-full z-10`}>
+>>>>>>> dev
             <ul className="flex flex-col list-none items-stard">
                 <Link to='/searchmovie/action'><li className="pl-10 mb-3 text-2xl text-white" onClick={onActionClick}>Action</li></Link>
                 <Link to='/searchmovie/comedy'><li className="pl-10 my-3 text-2xl text-white" onClick={onComedyClick}>Comedy</li></Link>

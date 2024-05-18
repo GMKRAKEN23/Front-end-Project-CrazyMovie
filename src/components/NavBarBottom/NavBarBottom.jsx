@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 function NavBarBottom() {
     const location = useLocation();
 
-    return (
-        
+    return ( 
         <div className="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-white border border-gray-600 left-1/2 ">
             <div className="grid h-full grid-cols-3 mx-auto">
                 <button data-tooltip-target="tooltip-home" type="button" className="inline-flex flex-col items-center justify-center px-5">
@@ -21,7 +20,6 @@ function NavBarBottom() {
                 </button>
             </div>
         </div>
-
     )
 }
 

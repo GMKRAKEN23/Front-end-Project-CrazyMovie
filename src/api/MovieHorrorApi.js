@@ -11,10 +11,10 @@ async function fetchHorrorMovies() {
             throw new Error('The API request failed.');
         }
         const data = await response.json();
-        const actionMovies = data.results.filter(movie => {
+        const horrorMovies = data.results.filter(movie => {
             return movie.genre_ids.includes(horrorGenre.id);
         });
-        return actionMovies;
+        return horrorMovies;
     } catch (error) {
         console.error('Error recovering Horror movies:', error);
         throw error;

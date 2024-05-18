@@ -8,7 +8,7 @@ import FamilyGenre from "../../components/MoviesGenre/components/FamilyGenre";
 
 function ContainerGenre(){
     return (
-        <div className="w-full mb-20">
+        <div className={`w-full mb-20`}>
             <ActionGenre />
             <FamilyGenre />
             <DramaGenre />

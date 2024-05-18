@@ -36,7 +36,7 @@ function ContainerMovie() {
     return (
         <>
             <SearchBar />
-            {renderGenre()}
+            {renderGenre() }
             <NavBarBottom />
         </>
     );
