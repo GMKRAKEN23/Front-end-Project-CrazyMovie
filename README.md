@@ -17,14 +17,14 @@ The application is divided into 4 principal parts:
 4. Watchlist
 5. ErrorPage
 
-- The Homepage contains 2 components: 
+1. The Homepage contains 2 components: 
 The Trending component which contains trending movies.
 The ListMovies component which allows you to watch 3 categories of films:
 a) popular films 
 b) top rated 
 c) upcoming films
 
-- The movie detail page allows you to see the most important details of the movie like :
+2. The movie detail page allows you to see the most important details of the movie like :
 a) rating
 b) genre
 c) release date
@@ -33,11 +33,11 @@ e) preview
 
 Note : I used the slice method (JavaScript) to limit the number of films to 18 for each section allowing a more simplified and easy search for the user.
 
-- The search movie page contains 2 components:
+3. The search movie page contains 2 components:
 The SearchBar component allows you to search for any movie from an API call (TMDB).
 The ContainerGenre component allows you to search for films in their respective categories. Each category contains a carousel that allows you to swipe to the right and choose the films that interest you the most.
 
-- The errorPage displays an appropriate elegant message based on the HTTP error code : 400, 401, 404, 503. 
+5. The errorPage displays an appropriate elegant message based on the HTTP error code : 400, 401, 404, 503. 
 
 ## Technologies
 1. REACT.JS
