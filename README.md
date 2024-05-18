@@ -7,7 +7,8 @@
 </div>
 
 ## Description 
-Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)
+Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)   
+
 The CrazyMovie app is a web app built with React that allows users to follow movie news and search for information about any movie.
 
 The application is divided into 4 principal parts:
