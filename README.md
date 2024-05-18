@@ -12,12 +12,13 @@ Here is the link to the project hosted on Vercel : [Crazy Movie App](https://fro
 The CrazyMovie app is a web app built with React that allows users to follow movie news and search for information about any movie.
 
 The application is divided into 4 principal parts:
-1. La homepage
-2. Details movie
-3. Search movie
-4. Watchlist
-5. ErrorPage
 
+- La homepage
+- Details movie
+- Search movie
+- Watchlist
+- ErrorPage   
+  
 1. The Homepage contains 2 components: 
 The Trending component which contains trending movies.
 The ListMovies component which allows you to watch 3 categories of films:
