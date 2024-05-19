@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { fetchMovieTitle } from '../../../api/titleApi';
 import { fetchImageMovie } from '../../../api/imageMovie';
 import { fetchMovieTime } from '../../../api/runTimeApi';
@@ -6,7 +7,6 @@ import { fetchMovieDate } from '../../../api/dateMovieApi';
 import { fetchMovieRatings } from '../../../api/ratedApi';
 
 function truncateTitle(title, maxLength) {
-  
   if (title.length > maxLength) {
     return title.substring(0, maxLength) + '...';
   }
@@ -39,11 +39,13 @@ function ContainerWatchList() {
       <div>
         {favoriteMovies.map((movie, index) => (
           <div className="flex w-3/4 mx-auto my-10" key={index}>
-            <div className="rounded-lg">
-              <img src={movie.imageUrl} alt={movie.title} className="h-40 w-28 rounded-xl" />
-            </div>
+            <Link to={`/detailsmovies/${movie.id}/`}>
+              <div className="rounded-lg">
+                <img src={movie.imageUrl} alt={movie.title} className="h-40 w-28 rounded-xl" />
+              </div>
+            </Link>
             <div className="flex flex-col justify-between ml-4">
-              <h2 className="text-xl text-white text-wrap">{truncateTitle(movie.title, 10)}</h2>
+              <h2 className="text-xl text-white text-wrap">{truncateTitle(movie.title, 13)}</h2>
               
               <div className="flex items-center">
                 <i className='text-white bx bxs-time-five'></i> 
