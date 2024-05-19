@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
                 path: '/trending',
                 element: <Trending />,
             }
-        ]
+        ],  
     },
     {
         path: `/detailsmovies/:id`,
@@ -74,6 +74,5 @@ export const router = createBrowserRouter([
             caseSensitive: true,
           }
         ]
-      }
-      
+      } 
 ])
