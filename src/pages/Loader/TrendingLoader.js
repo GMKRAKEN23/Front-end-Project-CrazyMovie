@@ -1,4 +1,4 @@
-import { fetchTrendingMovies } from '../api/trendingApi'; 
+import { fetchTrendingMovies } from '../../api/trendingApi'; 
 
 export async function trendingLoader() {
   try {
