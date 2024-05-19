@@ -4,7 +4,6 @@ import DetailsMovies from "./pages/DetailsMovie/DetailsMovie";
 import HomePage from "./pages/Homepage/HomePage";
 import WatchList from "./pages/Watchlist/WatchList";
 import SearchMovie from "./pages/SearchMovie/SearchMovie";
-import ContainerMovie from "./pages/SearchMovie/ContainerMovie";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Trending from "./components/Trending";
 
@@ -41,37 +40,37 @@ export const router = createBrowserRouter([
         children: [
           {
             path: 'action',
-            element: <ContainerMovie/>,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'comedy',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'drama',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'family',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'fantasy',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'horror',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           },
           {
             path: 'sciencefiction',
-            element: <ContainerMovie />,
+            element: <SearchMovie/>,
             caseSensitive: true,
           }
         ]

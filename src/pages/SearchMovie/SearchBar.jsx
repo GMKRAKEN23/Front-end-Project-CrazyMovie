@@ -39,21 +39,23 @@ function SearchBar({ setMovieResults, movieResults }) {
                     </svg>
                 </button>
             </div>
-            <div className="grid w-3/4 grid-cols-2 gap-4 mx-auto mt-4">
-                {movieResults.map((movie) => (
-                    <Link to={`/detailsmovies/${movie.id}`} key={movie.id}>
-                        <div className="flex flex-col items-center">
-                            <img
-                                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                                alt={movie.title}
-                                className="mt-4 rounded-lg cursor-pointer w-[10em] h-[10em]"
-                            />
-                            <p className="mt-2 tracking-wider text-center text-white">{movie.title}</p>
-                            <p className="text-orange-600">({new Date(movie.release_date).getFullYear()})</p>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+            {movieResults.length > 0 && (
+                <div className="grid w-3/4 grid-cols-2 gap-4 mx-auto mt-4 mb-20">
+                    {movieResults.map((movie) => (
+                        <Link to={`/detailsmovies/${movie.id}`} key={movie.id}>
+                            <div className="flex flex-col items-center">
+                                <img
+                                    src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                                    alt={movie.title}
+                                    className="mt-4 rounded-lg cursor-pointer w-[10em] h-[10em]"
+                                />
+                                <p className="mt-2 tracking-wider text-center text-white">{movie.title}</p>
+                                <p className="text-orange-600">({new Date(movie.release_date).getFullYear()})</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            )}
         </form>
     );
 }
