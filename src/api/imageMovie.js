@@ -4,7 +4,8 @@ async function fetchImageMovie(movieId) {
         const data = await response.json();
         
         if (data.poster_path !== undefined) {
-            return data.poster_path;
+            const baseUrl = "https://image.tmdb.org/t/p/w500"; 
+            return `${baseUrl}${data.poster_path}`;
         } else {
             throw new Error("Images are not present in the API response.");
         }
