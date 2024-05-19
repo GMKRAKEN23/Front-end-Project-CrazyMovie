@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: 'action',
-            element: <ContainerMovie />,
+            element: <ContainerMovie/>,
             caseSensitive: true,
           },
           {
