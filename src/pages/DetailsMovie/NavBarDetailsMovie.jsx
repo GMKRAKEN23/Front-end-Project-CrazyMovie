@@ -1,13 +1,36 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function NavBarDetailsMovie(){
-    return (
-        <div className="w-full flex justify-around h-20 cursor-pointer items-center">
-            <Link to='/'><i className='bx bx-chevron-left text-white text-4xl'></i></Link>
-            <h2 className="lato text-white text-xl tracking-widest font-semibold">Detail</h2>
-            <a href="#"><i className='bx bxs-bookmark-star text-white text-4xl cursor-pointer'></i></a>
-        </div>
-    )
+function NavBarDetailsMovie({ movieId, movieTitle }) {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(favorites.includes(movieId));
+  }, [movieId]);
+
+  const handleFavoriteToggle = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    let newFavorites;
+    if (favorites.includes(movieId)) {
+      newFavorites = favorites.filter(id => id !== movieId);
+    } else {
+      newFavorites = [...favorites, movieId];
+    }
+    localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    setIsFavorite(!isFavorite);
+  };
+
+  return (
+    <div className="flex items-center justify-around w-full h-20 cursor-pointer">
+      <Link to="/"><i className="text-4xl text-white bx bx-chevron-left"></i></Link>
+      <h2 className="text-xl font-semibold tracking-widest text-white lato">{movieTitle}</h2>
+      <i
+        className={`bx bxs-bookmark-star text-4xl cursor-pointer ${isFavorite ? "text-orange-600" : "text-white"}`}
+        onClick={handleFavoriteToggle}
+      ></i>
+    </div>
+  );
 }
 
 export default NavBarDetailsMovie;
