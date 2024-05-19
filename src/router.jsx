@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/trending',
-                element: <Trending />, 
+                element: <Trending />,
             }
         ]
     },
