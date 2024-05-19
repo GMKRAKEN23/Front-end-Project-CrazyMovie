@@ -6,7 +6,8 @@ import WatchList from "./pages/Watchlist/WatchList";
 import SearchMovie from "./pages/SearchMovie/SearchMovie";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Trending from "./components/Trending";
-import { trendingLoader } from "../src/pages/Loader/TrendingLoader";
+import { trendingLoader } from "./pages/Loader/trendingLoader";
+
 
 export const router = createBrowserRouter([
     {

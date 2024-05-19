@@ -2,17 +2,16 @@ import { useState, useEffect } from 'react';
 import { fetchTrendingMovies } from '../api/trendingApi'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
-import { Link, useLocation } from 'react-router-dom'; // Importez useLocation
+import { Link, useLocation } from 'react-router-dom'; 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import Spinner from './Spinner'; // Importez votre composant Spinner
+import Spinner from './Spinner'; 
 
 function Trending() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const location = useLocation(); // Utilisez useLocation pour obtenir le pathname actuel
-
+  const location = useLocation(); 
   useEffect(() => {
     async function fetchData() {
       try {
