@@ -44,7 +44,7 @@ function SearchMovie() {
         <div>
             <SearchBar setMovieResults={setMovieResults} movieResults={movieResults} />
             {movieResults.length === 0 && !['/searchmovie/action', '/searchmovie/comedy', '/searchmovie/drama', '/searchmovie/family', '/searchmovie/fantasy', '/searchmovie/horror', '/searchmovie/sciencefiction'].includes(location.pathname) && <ContainerGenre />} 
-            {renderGenre()}
+            {movieResults.length === 0 && renderGenre()}
             <NavBarBottom />
         </div>
     );
