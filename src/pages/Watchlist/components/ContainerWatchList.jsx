@@ -5,6 +5,14 @@ import { fetchMovieTime } from '../../../api/runTimeApi';
 import { fetchMovieDate } from '../../../api/dateMovieApi';
 import { fetchMovieRatings } from '../../../api/ratedApi';
 
+function truncateTitle(title, maxLength) {
+  
+  if (title.length > maxLength) {
+    return title.substring(0, maxLength) + '...';
+  }
+  return title;
+}
+
 function ContainerWatchList() {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
 
@@ -27,20 +35,31 @@ function ContainerWatchList() {
   }, []);
 
   return (
-    <div className="w-full my-10">
+    <div className="w-full my-3 mb-20">
       <div>
         {favoriteMovies.map((movie, index) => (
-          <div className="flex my-10" key={index}>
-            <div>
-              <img src={movie.imageUrl} alt={movie.title} className="w-40 h-40" />
+          <div className="flex w-3/4 mx-auto my-10" key={index}>
+            <div className="rounded-lg">
+              <img src={movie.imageUrl} alt={movie.title} className="h-40 w-28 rounded-xl" />
             </div>
-            <h2 className="text-lg text-white">{movie.title}</h2>
-            <p className="text-white">{movie.date}</p>
-            <div className="flex items-center w-20 cursor-pointer h-7 rounded-xl">
-              <i className='px-1 text-base text-orange-600 bx bxs-star'></i>
-              <p className="text-orange-600">{movie.rating}</p>
+            <div className="flex flex-col justify-between ml-4">
+              <h2 className="text-xl text-white text-wrap">{truncateTitle(movie.title, 10)}</h2>
+              
+              <div className="flex items-center">
+                <i className='text-white bx bxs-time-five'></i> 
+                <p className="ml-2 text-base text-white">{movie.duration} min.</p>
+              </div>
+              
+              <div className="flex items-center">
+                <i className='text-white bx bxs-calendar'></i>  
+                <p className="ml-2 text-white">{movie.date}</p>
+              </div>
+              
+              <div className="flex items-center w-20 cursor-pointer h-7 rounded-xl">
+                <i className='px-1 text-base text-orange-600 bx bxs-star'></i>
+                <p className="text-orange-600">{movie.rating.toFixed(1)}</p>
+              </div>
             </div>
-
           </div>
         ))}
       </div>

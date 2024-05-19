@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function NavBarDetailsMovie({ movieId, movieTitle }) {
+function NavBarDetailsMovie({ movieId }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function NavBarDetailsMovie({ movieId, movieTitle }) {
   return (
     <div className="flex items-center justify-around w-full h-20 cursor-pointer">
       <Link to="/"><i className="text-4xl text-white bx bx-chevron-left"></i></Link>
-      <h2 className="text-xl font-semibold tracking-widest text-white lato">{movieTitle}</h2>
+      <h2 className="text-xl font-semibold tracking-widest text-white lato">Detail</h2>
       <i
         className={`bx bxs-bookmark-star text-4xl cursor-pointer ${isFavorite ? "text-orange-600" : "text-white"}`}
         onClick={handleFavoriteToggle}
