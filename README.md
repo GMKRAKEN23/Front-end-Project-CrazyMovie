@@ -27,7 +27,7 @@ a) popular films
 b) top rated 
 c) upcoming films
 
-2. The movie detail page allows you to see the most important details of the movie like :
+2. The detailsMovie page allows you to see the most important details of the movie like :
 a) rating
 b) genre
 c) release date
@@ -39,6 +39,10 @@ Note : I used the slice method (JavaScript) to limit the number of films to 18 f
 3. The search movie page contains 2 components:
 The SearchBar component allows you to search for any movie from an API call (TMDB).
 The ContainerGenre component allows you to search for films in their respective categories. Each category contains a carousel that allows you to swipe to the right and choose the films that interest you the most.
+
+4. CrazyMovie's Watchlist feature offers users the ability to create their own list of favorite movies. Browsing through the vast collection of movies offered by the app, users can add movies to the watchlist page with a single click. This allows them to keep track of which films they want to watch later or which they particularly enjoyed.
+   
+Once a movie is added to the watchlist, users can easily find it!
 
 5. The errorPage displays an appropriate elegant message based on the HTTP error code : 400, 401, 404, 503. 
 
