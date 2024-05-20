@@ -8,6 +8,8 @@
 </div>
 
 ## Description 
+This application is exclusively designed as a React web application and will not be expanded to include a desktop version! 
+
 Here is the link to the project hosted on Vercel : [Crazy Movie App](https://front-end-project-crazy-movie.vercel.app/)   
 
 The CrazyMovie app is a web app built with React that allows users to follow movie news and search for information about any movie.
