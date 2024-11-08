@@ -16,7 +16,7 @@ The CrazyMovie app is a web app built with React that allows users to follow mov
 
 The application is divided into 5 principale parts
 
-- La homepage
+- Homepage
 - Details movie
 - Search movie
 - Watchlist
